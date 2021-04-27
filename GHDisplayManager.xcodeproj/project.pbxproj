@@ -7,7 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37F078632638B4C200BA3320 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078622638B4C200BA3320 /* main.m */; };
+		37F0786C2638B4D400BA3320 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F0786B2638B4D400BA3320 /* test.m */; };
+		37F078712638B57B00BA3320 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -24,7 +25,10 @@
 
 /* Begin PBXFileReference section */
 		37F0785F2638B4C200BA3320 /* GHDisplayManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GHDisplayManager; sourceTree = BUILT_PRODUCTS_DIR; };
-		37F078622638B4C200BA3320 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		37F0786A2638B4D400BA3320 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
+		37F0786B2638B4D400BA3320 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		37F0786F2638B57B00BA3320 /* DisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
+		37F078702638B57B00BA3320 /* DisplayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -57,7 +61,10 @@
 		37F078612638B4C200BA3320 /* GHDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
-				37F078622638B4C200BA3320 /* main.m */,
+				37F0786A2638B4D400BA3320 /* test.h */,
+				37F0786B2638B4D400BA3320 /* test.m */,
+				37F0786F2638B57B00BA3320 /* DisplayManager.h */,
+				37F078702638B57B00BA3320 /* DisplayManager.m */,
 			);
 			path = GHDisplayManager;
 			sourceTree = "<group>";
@@ -118,7 +125,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37F078632638B4C200BA3320 /* main.m in Sources */,
+				37F078712638B57B00BA3320 /* DisplayManager.m in Sources */,
+				37F0786C2638B4D400BA3320 /* test.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

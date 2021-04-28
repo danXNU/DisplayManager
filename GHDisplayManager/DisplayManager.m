@@ -7,6 +7,8 @@
 
 #import "DisplayManager.h"
 
+
+
 @implementation DisplayManager
 
 - (CGSDisplayMode)getModeFromDisplayNumber:(CGDirectDisplayID)display {
@@ -26,7 +28,35 @@
     return mode;
 }
 
--(NSArray *)getActiveMonitors {
+- (NSArray<NSDictionary *> *)getModesForMonitor:(NSUUID *)displayID {
+    int displayNumber = [[self getDisplayNumberFromUUID:displayID] intValue];
+    
+    
+    int modesCount = 0;
+    // ottengo il numero di modes disponibili
+    CGSGetNumberOfDisplayModes(displayNumber, &modesCount);
+
+    NSMutableArray *modes = [NSMutableArray array];
+    
+    for (int i=0; i < modesCount; i++) {
+        //ottengo l'indice della modalità attuale
+        CGSDisplayMode mode;
+        CGSGetDisplayModeDescriptionOfLength(displayNumber, i, &mode, sizeof(CGSDisplayMode));
+        
+        NSDictionary *modeMap = @{
+            @"width" : [[NSNumber alloc]initWithInt:mode.width],
+            @"height" : [[NSNumber alloc]initWithInt:mode.height],
+            @"freq": [[NSNumber alloc] initWithInt:mode.freq],
+            @"modeID": [[NSNumber alloc] initWithInt:mode.modeNumber],
+        };
+        
+        [modes addObject:modeMap];
+    }
+    
+    return modes;
+}
+
+-(NSArray<NSNumber *> *)getActiveMonitors {
     CGDirectDisplayID displaysIDs[3] = {};
     uint32_t displayCount = 0;
 
@@ -48,6 +78,21 @@
     NSString  *_uuidStr = (__bridge NSString *)CFUUIDCreateString(NULL, _uuid);
     NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:_uuidStr];
     return uuid;
+}
+
+- (NSNumber *)getDisplayNumberFromUUID:(NSUUID *)uuid {
+    NSArray *activeMonitors = [self getActiveMonitors];
+    CGDirectDisplayID displayID = 0;
+    
+    for (NSNumber *monitorNumber in activeMonitors) {
+        NSUUID *monitorUUID = [self getUUIDFromDisplayNumber:monitorNumber];
+        if ([monitorUUID isEqualTo:uuid]) {
+            displayID = [monitorNumber intValue];
+            break;
+        }
+    }
+    
+    return [[NSNumber alloc] initWithInt:displayID];
 }
 
 - (void)saveCurrentConfig {
@@ -78,7 +123,7 @@
     
 }
 
-- (void)loadSavedConfig {
+- (NSDictionary *)loadSavedConfig {
     NSString *path = [[[NSFileManager defaultManager] currentDirectoryPath]  stringByAppendingString:@"/test.json"];
     NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
     
@@ -89,6 +134,22 @@
                                       error:&error];
     
     NSLog(@"%@", map);
+    return map;
+}
+
+
+- (void)applyConfig:(NSDictionary *)configMap {
+    for (NSString *deviceID in [configMap allKeys]) {
+        NSUUID *uuid = [[NSUUID alloc] initWithUUIDString:deviceID];
+        CGDirectDisplayID displayNumber = [[self getDisplayNumberFromUUID:uuid] intValue];
+        
+        NSNumber *mode = (NSNumber *)configMap[deviceID];
+        
+        CGDisplayConfigRef config;
+        CGBeginDisplayConfiguration(&config);
+        CGSConfigureDisplayMode(config, displayNumber, [mode intValue]);
+        CGCompleteDisplayConfiguration(config, kCGConfigurePermanently);
+    }
 }
 
 @end

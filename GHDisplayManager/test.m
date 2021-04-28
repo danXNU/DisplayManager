@@ -56,8 +56,15 @@ int main(int argc, const char * argv[]) {
                 printf("---\n\n");
             }
         } else {
-            printf("Usage:\n");
-            printf("");
+            printf("\nUsage:\n");
+            printf("    -list-monitors: per mostrare l'elenco dei monitor e le loro attuali modalità\n\n");
+            printf("    -info [MONITOR_UUID]: per mostrare tutte le modalità (risoluzioni) disponibili per questo monitor ID.\n");
+            printf("        L'ID lo si può ottenere usando il comando '-list-monitors'\n\n");
+            printf("    -save: salva in un JSON nella attuale directory la configurazione degli attuali monitor\n\n");
+            printf("    -load: carica la configurazione dal JSON posizionato nell'attuale directory\n\n");
+            
+            printf("\nIl JSON di salvataggio è strutturato in questo modo:\n");
+            printf("    [ { 'MonitorUUID' : 'ModeNumber' }, ... ]\n\n");
         }
         
     }

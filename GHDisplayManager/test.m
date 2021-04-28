@@ -35,12 +35,31 @@ int main(int argc, const char * argv[]) {
         }
         
         if ([arguments containsObject:@"-save"]) {
-            NSLog(@"Saving config...");
-            [manager saveCurrentConfig];
+            printf("Saving config...\n");
+            
+            NSUInteger index = [arguments indexOfObject:@"-save"] + 1;
+            if (index == NSNotFound) {
+                [manager saveCurrentConfig];
+            } else {
+                NSString *path = (NSString *)[arguments objectAtIndex:index];
+                [manager saveCurrentConfig:path];
+            }
+            
+            printf("Saved!\n\n");
         } else if ([arguments containsObject:@"-load"]) {
-            NSLog(@"Loading config...");
-            NSDictionary *config = [manager loadSavedConfig];
-            [manager applyConfig:config];
+            printf("Loading config...\n");
+            
+            NSUInteger index = [arguments indexOfObject:@"-load"] + 1;
+            if (index == NSNotFound) {
+                NSDictionary *config = [manager loadSavedConfig];
+                [manager applyConfig:config];
+            } else {
+                NSString *path = (NSString *)[arguments objectAtIndex:index];
+                NSDictionary *config = [manager loadSavedConfig:path];
+                [manager applyConfig:config];
+            }
+            
+            printf("Loaded!\n\n");
         } else if ([arguments containsObject:@"-list-monitors"]) {
             NSArray *monitorNumbers = [manager getActiveMonitors];
             for (NSNumber *display in monitorNumbers) {
@@ -63,8 +82,10 @@ int main(int argc, const char * argv[]) {
             printf("    -save: salva in un JSON nella attuale directory la configurazione degli attuali monitor\n\n");
             printf("    -load: carica la configurazione dal JSON posizionato nell'attuale directory\n\n");
             
+            printf("\n\n---\n");
             printf("\nIl JSON di salvataggio è strutturato in questo modo:\n");
             printf("    [ { 'MonitorUUID' : 'ModeNumber' }, ... ]\n\n");
+            printf("Esempio: \n\t{\n\t\t\"0BE85EB5-65D4-A709-0857-D6964E3302DB\" : 93, \n\t\t\"37D8832A-2D66-02CA-B9F7-8F30A301B230\" : 8 \n\t}\n");
         }
         
     }

@@ -96,6 +96,11 @@
 }
 
 - (void)saveCurrentConfig {
+    NSString *path = [[[NSFileManager defaultManager] currentDirectoryPath]  stringByAppendingString:@"/test.json"];
+    [self saveCurrentConfig:path];
+}
+
+- (void)saveCurrentConfig:(NSString *)pathPassed {
     NSMutableDictionary *map = [NSMutableDictionary dictionary];
     NSArray *activeMonitors = [self getActiveMonitors];
     
@@ -116,15 +121,24 @@
     NSLog(@"%@", str);
     // ----
 
-    NSString *path = [[[NSFileManager defaultManager] currentDirectoryPath]  stringByAppendingString:@"/test.json"];
-    NSLog(@"PATH: %@", path);
     
-    [data writeToFile:path atomically:YES];
+    [data writeToFile:pathPassed atomically:YES];
     
 }
 
 - (NSDictionary *)loadSavedConfig {
     NSString *path = [[[NSFileManager defaultManager] currentDirectoryPath]  stringByAppendingString:@"/test.json"];
+    return [self loadConfig:path];
+}
+
+- (NSDictionary *)loadSavedConfig:(NSString *)pathPassed {
+    return [self loadConfig:pathPassed];
+}
+
+
+- (NSDictionary *)loadConfig:(NSString *)pathPassed {
+    NSString *path = pathPassed;
+    
     NSData *data = [[NSFileManager defaultManager] contentsAtPath:path];
     
     NSError *error;
@@ -133,7 +147,7 @@
                                     options:NSJSONReadingAllowFragments
                                       error:&error];
     
-    NSLog(@"%@", map);
+    printf("\n%s\n\n", [[[NSString alloc] initWithData:data encoding:NSUTF8StringEncoding] cStringUsingEncoding:NSUTF8StringEncoding]);
     return map;
 }
 

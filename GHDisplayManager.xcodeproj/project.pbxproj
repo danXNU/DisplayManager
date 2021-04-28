@@ -249,7 +249,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R779A64KR9;
+				DSTROOT = " $SRCROOT/build/pkgroot";
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -259,7 +261,9 @@
 			buildSettings = {
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R779A64KR9;
+				DSTROOT = " $SRCROOT/build/pkgroot";
 				ENABLE_HARDENED_RUNTIME = YES;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;

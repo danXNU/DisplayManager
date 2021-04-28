@@ -13,11 +13,16 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DisplayManager : NSObject
 - (CGSDisplayMode)getModeFromDisplayNumber:(CGDirectDisplayID)display;
 - (NSArray<NSNumber *> *)getActiveMonitors;
-- (void)saveCurrentConfig;
-- (NSDictionary *)loadSavedConfig;
+
 - (void)applyConfig:(NSDictionary *)configMap;
 - (NSUUID *)getUUIDFromDisplayNumber:(NSNumber *)displayNumber;
 - (NSArray<NSDictionary *> *)getModesForMonitor:(NSUUID *)displayID;
+
+- (NSDictionary *)loadSavedConfig;
+- (NSDictionary *)loadSavedConfig:(NSString *)pathPassed;
+
+- (void)saveCurrentConfig:(NSString *)pathPassed;
+- (void)saveCurrentConfig;
 @end
 
 NS_ASSUME_NONNULL_END

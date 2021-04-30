@@ -6,7 +6,8 @@
 //
 
 #import <Foundation/Foundation.h>
-#import "test.h"
+#import "CoreGraphicsAPI.h"
+#import "Monitor.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -23,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 - (void)saveCurrentConfig:(NSString *)pathPassed;
 - (void)saveCurrentConfig;
+
+- (void)applyMode:(NSUInteger)modeNumber toMonitorID:(NSUUID *)monitorID;
+
 @end
 
 NS_ASSUME_NONNULL_END

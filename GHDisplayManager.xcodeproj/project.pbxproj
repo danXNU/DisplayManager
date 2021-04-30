@@ -7,7 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		37F0786C2638B4D400BA3320 /* test.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F0786B2638B4D400BA3320 /* test.m */; };
+		37CECF68263B1A160037B9FF /* UIDisplayManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */; };
+		37CECF6A263B1A160037B9FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF69263B1A160037B9FF /* ContentView.swift */; };
+		37CECF6C263B1A170037B9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CECF6B263B1A170037B9FF /* Assets.xcassets */; };
+		37CECF6F263B1A170037B9FF /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CECF6E263B1A170037B9FF /* Preview Assets.xcassets */; };
+		37CECF76263B1A4C0037B9FF /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
+		37CECF80263C2E970037B9FF /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
+		37CECF81263C2E970037B9FF /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
+		37CECF83263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
+		37CECF84263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
+		37CECF86263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
+		37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
+		37F0786C2638B4D400BA3320 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F0786B2638B4D400BA3320 /* main.m */; };
 		37F078712638B57B00BA3320 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 /* End PBXBuildFile section */
 
@@ -24,14 +35,33 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		37CECF65263B1A160037B9FF /* UIDisplayManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDisplayManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDisplayManagerApp.swift; sourceTree = "<group>"; };
+		37CECF69263B1A160037B9FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
+		37CECF6B263B1A170037B9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37CECF6E263B1A170037B9FF /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37CECF70263B1A170037B9FF /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37CECF71263B1A170037B9FF /* UIDisplayManager.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = UIDisplayManager.entitlements; sourceTree = "<group>"; };
+		37CECF77263B1B830037B9FF /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		37CECF7E263C2E960037B9FF /* GHDisplayManager-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "GHDisplayManager-Bridging-Header.h"; sourceTree = "<group>"; };
+		37CECF7F263C2E970037B9FF /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
+		37CECF82263C37270037B9FF /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
+		37CECF85263C37A80037B9FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		37F0785F2638B4C200BA3320 /* GHDisplayManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GHDisplayManager; sourceTree = BUILT_PRODUCTS_DIR; };
-		37F0786A2638B4D400BA3320 /* test.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = test.h; sourceTree = "<group>"; };
-		37F0786B2638B4D400BA3320 /* test.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = test.m; sourceTree = "<group>"; };
+		37F0786A2638B4D400BA3320 /* CoreGraphicsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsAPI.h; sourceTree = "<group>"; };
+		37F0786B2638B4D400BA3320 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37F0786F2638B57B00BA3320 /* DisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
 		37F078702638B57B00BA3320 /* DisplayManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DisplayManager.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		37CECF62263B1A160037B9FF /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F0785C2638B4C200BA3320 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -42,10 +72,48 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		37CECF66263B1A160037B9FF /* UIDisplayManager */ = {
+			isa = PBXGroup;
+			children = (
+				37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */,
+				37CECF6B263B1A170037B9FF /* Assets.xcassets */,
+				37CECF70263B1A170037B9FF /* Info.plist */,
+				37CECF71263B1A170037B9FF /* UIDisplayManager.entitlements */,
+				37CECF6D263B1A170037B9FF /* Preview Content */,
+				37CECF77263B1B830037B9FF /* BridgingHeader.h */,
+				37CECF85263C37A80037B9FF /* ViewModel.swift */,
+				37CECF69263B1A160037B9FF /* ContentView.swift */,
+			);
+			path = UIDisplayManager;
+			sourceTree = "<group>";
+		};
+		37CECF6D263B1A170037B9FF /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				37CECF6E263B1A170037B9FF /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		37CECF75263B1A380037B9FF /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				37F0786A2638B4D400BA3320 /* CoreGraphicsAPI.h */,
+				37F0786F2638B57B00BA3320 /* DisplayManager.h */,
+				37F078702638B57B00BA3320 /* DisplayManager.m */,
+				37CECF7E263C2E960037B9FF /* GHDisplayManager-Bridging-Header.h */,
+				37CECF7F263C2E970037B9FF /* Monitor.swift */,
+				37CECF82263C37270037B9FF /* Mode.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
 		37F078562638B4C200BA3320 = {
 			isa = PBXGroup;
 			children = (
+				37CECF75263B1A380037B9FF /* Model */,
 				37F078612638B4C200BA3320 /* GHDisplayManager */,
+				37CECF66263B1A160037B9FF /* UIDisplayManager */,
 				37F078602638B4C200BA3320 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -54,6 +122,7 @@
 			isa = PBXGroup;
 			children = (
 				37F0785F2638B4C200BA3320 /* GHDisplayManager */,
+				37CECF65263B1A160037B9FF /* UIDisplayManager.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -61,10 +130,7 @@
 		37F078612638B4C200BA3320 /* GHDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
-				37F0786A2638B4D400BA3320 /* test.h */,
-				37F0786B2638B4D400BA3320 /* test.m */,
-				37F0786F2638B57B00BA3320 /* DisplayManager.h */,
-				37F078702638B57B00BA3320 /* DisplayManager.m */,
+				37F0786B2638B4D400BA3320 /* main.m */,
 			);
 			path = GHDisplayManager;
 			sourceTree = "<group>";
@@ -72,6 +138,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		37CECF64263B1A160037B9FF /* UIDisplayManager */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "UIDisplayManager" */;
+			buildPhases = (
+				37CECF61263B1A160037B9FF /* Sources */,
+				37CECF62263B1A160037B9FF /* Frameworks */,
+				37CECF63263B1A160037B9FF /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = UIDisplayManager;
+			productName = UIDisplayManager;
+			productReference = 37CECF65263B1A160037B9FF /* UIDisplayManager.app */;
+			productType = "com.apple.product-type.application";
+		};
 		37F0785E2638B4C200BA3320 /* GHDisplayManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37F078662638B4C200BA3320 /* Build configuration list for PBXNativeTarget "GHDisplayManager" */;
@@ -95,10 +178,15 @@
 		37F078572638B4C200BA3320 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 1240;
+				LastSwiftUpdateCheck = 1250;
+				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					37CECF64263B1A160037B9FF = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					37F0785E2638B4C200BA3320 = {
 						CreatedOnToolsVersion = 12.4;
+						LastSwiftMigration = 1250;
 					};
 				};
 			};
@@ -116,23 +204,108 @@
 			projectRoot = "";
 			targets = (
 				37F0785E2638B4C200BA3320 /* GHDisplayManager */,
+				37CECF64263B1A160037B9FF /* UIDisplayManager */,
 			);
 		};
 /* End PBXProject section */
 
+/* Begin PBXResourcesBuildPhase section */
+		37CECF63263B1A160037B9FF /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37CECF6F263B1A170037B9FF /* Preview Assets.xcassets in Resources */,
+				37CECF6C263B1A170037B9FF /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
+		37CECF61263B1A160037B9FF /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37CECF81263C2E970037B9FF /* Monitor.swift in Sources */,
+				37CECF84263C37270037B9FF /* Mode.swift in Sources */,
+				37CECF6A263B1A160037B9FF /* ContentView.swift in Sources */,
+				37CECF76263B1A4C0037B9FF /* DisplayManager.m in Sources */,
+				37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */,
+				37CECF68263B1A160037B9FF /* UIDisplayManagerApp.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F0785B2638B4C200BA3320 /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37CECF86263C37A80037B9FF /* ViewModel.swift in Sources */,
 				37F078712638B57B00BA3320 /* DisplayManager.m in Sources */,
-				37F0786C2638B4D400BA3320 /* test.m in Sources */,
+				37CECF80263C2E970037B9FF /* Monitor.swift in Sources */,
+				37CECF83263C37270037B9FF /* Mode.swift in Sources */,
+				37F0786C2638B4D400BA3320 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin XCBuildConfiguration section */
+		37CECF72263B1A170037B9FF /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/UIDisplayManager.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/Preview Content\"";
+				DEVELOPMENT_TEAM = R779A64KR9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UIDisplayManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.UIDisplayManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = UIDisplayManager/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		37CECF73263B1A170037B9FF /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/UIDisplayManager.entitlements;
+				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/Preview Content\"";
+				DEVELOPMENT_TEAM = R779A64KR9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = UIDisplayManager/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.UIDisplayManager;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OBJC_BRIDGING_HEADER = UIDisplayManager/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		37F078642638B4C200BA3320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
@@ -241,36 +414,63 @@
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = macosx;
+				SWIFT_COMPILATION_MODE = wholemodule;
 			};
 			name = Release;
 		};
 		37F078672638B4C200BA3320 /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R779A64KR9;
-				DSTROOT = " $SRCROOT/build/pkgroot";
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Model/GHDisplayManager-Bridging-Header.h";
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Debug;
 		};
 		37F078682638B4C200BA3320 /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				CLANG_ENABLE_MODULES = YES;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = R779A64KR9;
-				DSTROOT = " $SRCROOT/build/pkgroot";
 				ENABLE_HARDENED_RUNTIME = YES;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+					"@loader_path/../Frameworks",
+				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = "Model/GHDisplayManager-Bridging-Header.h";
+				SWIFT_VERSION = 5.0;
 			};
 			name = Release;
 		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "UIDisplayManager" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37CECF72263B1A170037B9FF /* Debug */,
+				37CECF73263B1A170037B9FF /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37F0785A2638B4C200BA3320 /* Build configuration list for PBXProject "GHDisplayManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

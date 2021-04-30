@@ -1,5 +1,5 @@
 // clang displaymode.c -o displaymode -framework CoreGraphics
-#include "test.h"
+#include "CoreGraphicsAPI.h"
 #include <Foundation/Foundation.h>
 #include "DisplayManager.h"
 

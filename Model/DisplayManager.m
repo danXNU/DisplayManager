@@ -48,6 +48,7 @@
             @"height" : [[NSNumber alloc]initWithInt:mode.height],
             @"freq": [[NSNumber alloc] initWithInt:mode.freq],
             @"modeID": [[NSNumber alloc] initWithInt:mode.modeNumber],
+            @"density": [[NSNumber alloc] initWithFloat:mode.density]
         };
         
         [modes addObject:modeMap];
@@ -164,6 +165,16 @@
         CGSConfigureDisplayMode(config, displayNumber, [mode intValue]);
         CGCompleteDisplayConfiguration(config, kCGConfigurePermanently);
     }
+}
+
+- (void)applyMode:(NSUInteger)modeNumber toMonitorID:(NSUUID *)monitorID {
+    NSUInteger monitorNumber = [[self getDisplayNumberFromUUID:monitorID] unsignedIntValue];
+    
+    CGDisplayConfigRef config;
+    CGBeginDisplayConfiguration(&config);
+    CGSConfigureDisplayMode(config, monitorNumber, modeNumber);
+    CGCompleteDisplayConfiguration(config, kCGConfigurePermanently);
+    
 }
 
 @end

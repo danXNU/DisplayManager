@@ -11,66 +11,60 @@ struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
     var body: some View {
-        ScrollView {
-            VStack {
-                ForEach(viewModel.monitors, id: \.number) { monitor in
-                    VStack {
-                        Image(systemName: "display")
-                            .font(.largeTitle)
-                            .onHover { isHovered in
-                                if isHovered {
-                                    show(monitor: monitor)
-                                } else {
-                                    hide()
-                                }
-                            }
-                        Text("Monitor \(monitor.number)")
-                        
-                        Picker("Resolution", selection: resolutionBinding(for: monitor)) {
-                            let modes = monitor.getAvailableModes()
-                            ForEach(modes, id: \.id) { mode in
-                                Text(mode.string(style: .medium))
-                                    .tag(mode)
-                            }
-                        }
-                        .frame(width: 250)
-                                                
-                        Divider()
-                    }
-                    .padding()
-                }
-                
+        VStack {
+            ForEach(viewModel.monitors, id: \.number) { monitor in
                 VStack {
-                    HStack {
-                        Text("Save config as default")
-                        
-                        Spacer()
-                        Button("Save") {
-                            viewModel.saveConfig()
+                    Image(systemName: "display")
+                        .font(.largeTitle)
+                        .onHover { isHovered in
+                            if isHovered {
+                                show(monitor: monitor)
+                            } else {
+                                hide()
+                            }
                         }
-                        .disabled(saveButtonDisabled)
-                    }
+                    Text("Monitor \(monitor.number)")
                     
-                    HStack {
-                        Text("Set config on startup")
-                        Spacer()
-                        Toggle("", isOn: .constant(true))
-                            .toggleStyle(SwitchToggleStyle())
-                            .labelsHidden()
+                    Picker("Resolution", selection: resolutionBinding(for: monitor)) {
+                        let modes = monitor.getAvailableModes()
+                        ForEach(modes, id: \.id) { mode in
+                            Text(mode.string(style: .medium))
+                                .tag(mode)
+                        }
                     }
+                    .frame(width: 250)
                     
-                    Button("Restore default") {
-                        viewModel.restoreDefaults()
-                    }
-                    .disabled(isRestoreDefaultDisabled)
+                    Divider()
                 }
-                .padding(.horizontal)
-                
-                
                 
             }
+            
+            VStack {
+                HStack {
+                    Text("Save config as default")
+                    
+                    Spacer()
+                    Button("Save") {
+                        viewModel.saveConfig()
+                    }
+                    .disabled(saveButtonDisabled)
+                }
+                
+                HStack {
+                    Text("Set config on startup")
+                    Spacer()
+                    Toggle("", isOn: .constant(true))
+                        .toggleStyle(SwitchToggleStyle())
+                        .labelsHidden()
+                }
+                
+                Button("Restore default") {
+                    viewModel.restoreDefaults()
+                }
+                .disabled(isRestoreDefaultDisabled)
+            }
         }
-        
+        .padding()
     }
     
     func show(monitor: Monitor) {
@@ -81,13 +75,12 @@ struct ContentView: View {
             return
         }
         
-        let frame = screen.frame
-        let vc = NSHostingController(rootView: Color.blue.opacity(0.5))
-        vc.view.frame = frame
-        vc.view.resignFirstResponder()
+        hide()
+        
+        let vc = NSHostingController(rootView: PlaceholderView(monitor: monitor))
+        vc.view.frame = screen.frame
         vc.view.layer?.backgroundColor = .clear
         
-//        let newWindow = NSWindow(contentViewController: vc)
         let newWindow = NSPanel(contentViewController: vc)
         newWindow.styleMask =  NSWindow.StyleMask.hudWindow
         newWindow.setFrameOrigin(screen.visibleFrame.origin)
@@ -96,10 +89,8 @@ struct ContentView: View {
         
         viewModel.presentedWindow = NSWindowController(window: newWindow)
         viewModel.presentedWindow?.showWindow(nil)
-        viewModel.presentedWindow?.resignFirstResponder()
         
         NSApp.keyWindow?.makeKeyAndOrderFront(nil)
-//        NSApp.keyWindow?.level = .statusBar
     }
     
     func hide() {
@@ -125,13 +116,21 @@ struct ContentView: View {
     }
 }
 
-struct ContentView_Previews: PreviewProvider {
-    static var previews: some View {
-        ContentView()
-    }
-}
 
-
-class PlaceHolderWindow: NSWindow {
+struct PlaceholderView: View {
+    var monitor: Monitor
     
+    var body: some View {
+        ZStack {
+            Color.blue.opacity(0.4)
+            
+            VStack(spacing: 5) {
+                Text("\(monitor.number)")
+                    .font(.system(size: 200))
+                
+                Text("\(monitor.currentMode.string(style: .min))")
+                    .font(.system(size: 40))
+            }
+        }
+    }
 }

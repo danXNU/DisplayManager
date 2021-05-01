@@ -48,10 +48,6 @@ class ViewModel: ObservableObject {
         observers.removeAll()
     }
     
-    func showPlaceholder(in monitor: Monitor) {
-        hoveredMonitor = monitor
-        
-    }
     
     func dismissPlaceholder() {
         hoveredMonitor = nil

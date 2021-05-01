@@ -13,10 +13,6 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack {
-//                Button("Aggiorna") {
-//                    viewModel.update()
-//                }
-                
                 ForEach(viewModel.monitors, id: \.number) { monitor in
                     VStack {
                         Image(systemName: "display")
@@ -30,12 +26,7 @@ struct ContentView: View {
                             }
                         Text("Monitor \(monitor.number)")
                         
-                        Picker("Risoluzione", selection: resolutionBinding(for: monitor)) {
-//                            let modes = viewModel.getModes(for: monitor)
-//                            ForEach(modes, id: \.self) { mode in
-//                                Text(mode)
-//                            }
-                            
+                        Picker("Resolution", selection: resolutionBinding(for: monitor)) {
                             let modes = monitor.getAvailableModes()
                             ForEach(modes, id: \.id) { mode in
                                 Text(mode.string(style: .medium))
@@ -48,6 +39,35 @@ struct ContentView: View {
                     }
                     .padding()
                 }
+                
+                VStack {
+                    HStack {
+                        Text("Save config as default")
+                        
+                        Spacer()
+                        Button("Save") {
+                            viewModel.saveConfig()
+                        }
+                        .disabled(saveButtonDisabled)
+                    }
+                    
+                    HStack {
+                        Text("Set config on startup")
+                        Spacer()
+                        Toggle("", isOn: .constant(true))
+                            .toggleStyle(SwitchToggleStyle())
+                            .labelsHidden()
+                    }
+                    
+                    Button("Restore default") {
+                        viewModel.restoreDefaults()
+                    }
+                    .disabled(isRestoreDefaultDisabled)
+                }
+                .padding(.horizontal)
+                
+                
+                
             }
         }
         
@@ -79,7 +99,7 @@ struct ContentView: View {
         viewModel.presentedWindow?.resignFirstResponder()
         
         NSApp.keyWindow?.makeKeyAndOrderFront(nil)
-        NSApp.keyWindow?.level = .statusBar
+//        NSApp.keyWindow?.level = .statusBar
     }
     
     func hide() {
@@ -92,6 +112,16 @@ struct ContentView: View {
         } set: { newValue in
             monitor.setNewMode(mode: newValue)
         }
+    }
+    
+    var isRestoreDefaultDisabled: Bool {
+        if viewModel.defaultConfig.configs.isEmpty { return true }
+        return !viewModel.hasChanged
+    }
+    
+    var saveButtonDisabled: Bool {
+        if viewModel.defaultConfig.configs.isEmpty { return false }
+        return !viewModel.hasChanged
     }
 }
 

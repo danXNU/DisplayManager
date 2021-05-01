@@ -7,9 +7,9 @@
 
 import Foundation
 
-struct Mode: Hashable {
+struct Mode: Hashable, Codable {
     var width: UInt32
-    var heigth: UInt32
+    var height: UInt32
     var freq: UInt16
     var density: Float
     
@@ -17,7 +17,7 @@ struct Mode: Hashable {
     
     init(width: NSNumber, height: NSNumber, freq: NSNumber, density: NSNumber, id: NSNumber) {
         self.width = width.uint32Value
-        self.heigth = height.uint32Value
+        self.height = height.uint32Value
         self.freq = freq.uint16Value
         self.density = density.floatValue
         
@@ -27,7 +27,7 @@ struct Mode: Hashable {
     init(rawMode: CGSDisplayMode) {
         self.id = rawMode.modeNumber
         self.width = rawMode.width
-        self.heigth = rawMode.height
+        self.height = rawMode.height
         self.freq = rawMode.freq
         self.density = rawMode.density
     }
@@ -40,14 +40,17 @@ struct Mode: Hashable {
     enum Style {
         case full
         case medium
+        case min
     }
     
     func string(style: Style) -> String {
         switch style {
+        case .min:
+            return "\(width) x \(height)"
         case .full:
-            return "\(width) x \(heigth) @ \(freq)Hz - \(Int(density))x"
+            return "\(width) x \(height) @ \(freq)Hz - \(Int(density))x"
         case .medium:
-            return "\(width) x \(heigth) @ \(freq)Hz"
+            return "\(width) x \(height) @ \(freq)Hz"
         }
     }
 }

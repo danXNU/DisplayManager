@@ -15,6 +15,8 @@ class ViewModel: ObservableObject {
     @Published var monitors : [Monitor] = []
     @Published var hoveredMonitor: Monitor?
     
+    @Published var defaultConfig: Config = Config.getDefault()
+    
     var presentedWindow: NSWindowController?
     
     private var observers: [AnyCancellable] = []
@@ -41,15 +43,6 @@ class ViewModel: ObservableObject {
         }
     }
     
-    func getModes(for monitor: Monitor) -> [String] {
-        let manager = DisplayManager()
-        let modes = monitor.getAvailableModes()
-    
-    
-        
-    }
-    
-    
     func free() {
         observers.forEach { $0.cancel() }
         observers.removeAll()
@@ -66,5 +59,37 @@ class ViewModel: ObservableObject {
         presentedWindow?.dismissController(self)
         presentedWindow?.close()
         presentedWindow = nil
+    }
+    
+    func saveConfig() {
+        defaultConfig.configs.removeAll()
+        
+        for monitor in self.monitors {
+            defaultConfig.configs[monitor.id] = monitor.currentMode
+        }
+
+        defaultConfig.save()
+    }
+    
+    func restoreDefaults() {
+        for monitor in self.monitors {
+            guard let mode = self.defaultConfig.configs[monitor.id] else { continue }
+                
+            monitor.setNewMode(mode: mode)
+        }
+    }
+    
+    var hasChanged: Bool {
+        for monitor in monitors {
+            guard let savedConfig = defaultConfig.configs[monitor.id] else { continue }
+            let currentConfig = monitor.currentMode
+            
+            let changed = savedConfig.width != currentConfig.width || savedConfig.height != currentConfig.height || savedConfig.freq != currentConfig.freq || savedConfig.density != currentConfig.density
+            
+            if changed {
+                return true
+            }
+        }
+        return false
     }
 }

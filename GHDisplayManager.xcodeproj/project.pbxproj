@@ -18,6 +18,8 @@
 		37CECF84263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37CECF86263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
 		37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
+		37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF89263C9FF60037B9FF /* SettingsManager.swift */; };
+		37CECF8C263CA14E0037B9FF /* DefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* DefaultConfig.swift */; };
 		37F0786C2638B4D400BA3320 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F0786B2638B4D400BA3320 /* main.m */; };
 		37F078712638B57B00BA3320 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 /* End PBXBuildFile section */
@@ -47,6 +49,8 @@
 		37CECF7F263C2E970037B9FF /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		37CECF82263C37270037B9FF /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		37CECF85263C37A80037B9FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		37CECF89263C9FF60037B9FF /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
+		37CECF8B263CA14E0037B9FF /* DefaultConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultConfig.swift; sourceTree = "<group>"; };
 		37F0785F2638B4C200BA3320 /* GHDisplayManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GHDisplayManager; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F0786A2638B4D400BA3320 /* CoreGraphicsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsAPI.h; sourceTree = "<group>"; };
 		37F0786B2638B4D400BA3320 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -75,14 +79,13 @@
 		37CECF66263B1A160037B9FF /* UIDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
+				37CECF88263C9F8A0037B9FF /* SupportingFiles */,
 				37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */,
-				37CECF6B263B1A170037B9FF /* Assets.xcassets */,
-				37CECF70263B1A170037B9FF /* Info.plist */,
-				37CECF71263B1A170037B9FF /* UIDisplayManager.entitlements */,
-				37CECF6D263B1A170037B9FF /* Preview Content */,
 				37CECF77263B1B830037B9FF /* BridgingHeader.h */,
 				37CECF85263C37A80037B9FF /* ViewModel.swift */,
 				37CECF69263B1A160037B9FF /* ContentView.swift */,
+				37CECF89263C9FF60037B9FF /* SettingsManager.swift */,
+				37CECF8B263CA14E0037B9FF /* DefaultConfig.swift */,
 			);
 			path = UIDisplayManager;
 			sourceTree = "<group>";
@@ -106,6 +109,17 @@
 				37CECF82263C37270037B9FF /* Mode.swift */,
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		37CECF88263C9F8A0037B9FF /* SupportingFiles */ = {
+			isa = PBXGroup;
+			children = (
+				37CECF6D263B1A170037B9FF /* Preview Content */,
+				37CECF71263B1A170037B9FF /* UIDisplayManager.entitlements */,
+				37CECF70263B1A170037B9FF /* Info.plist */,
+				37CECF6B263B1A170037B9FF /* Assets.xcassets */,
+			);
+			path = SupportingFiles;
 			sourceTree = "<group>";
 		};
 		37F078562638B4C200BA3320 = {
@@ -227,8 +241,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				37CECF81263C2E970037B9FF /* Monitor.swift in Sources */,
+				37CECF8C263CA14E0037B9FF /* DefaultConfig.swift in Sources */,
 				37CECF84263C37270037B9FF /* Mode.swift in Sources */,
 				37CECF6A263B1A160037B9FF /* ContentView.swift in Sources */,
+				37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */,
 				37CECF76263B1A4C0037B9FF /* DisplayManager.m in Sources */,
 				37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */,
 				37CECF68263B1A160037B9FF /* UIDisplayManagerApp.swift in Sources */,
@@ -259,11 +275,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = R779A64KR9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UIDisplayManager/Info.plist;
+				INFOPLIST_FILE = UIDisplayManager/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",
@@ -287,11 +303,11 @@
 				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
-				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/Preview Content\"";
+				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/SupportingFiles/Preview Content\"";
 				DEVELOPMENT_TEAM = R779A64KR9;
 				ENABLE_HARDENED_RUNTIME = YES;
 				ENABLE_PREVIEWS = YES;
-				INFOPLIST_FILE = UIDisplayManager/Info.plist;
+				INFOPLIST_FILE = UIDisplayManager/SupportingFiles/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/../Frameworks",

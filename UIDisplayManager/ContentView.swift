@@ -10,6 +10,8 @@ import SwiftUI
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
     
+    @State var isHelpScreenShowing: Bool = false
+    
     var body: some View {
         VStack {
             ForEach(viewModel.monitors, id: \.number) { monitor in
@@ -18,9 +20,9 @@ struct ContentView: View {
                         .font(.largeTitle)
                         .onHover { isHovered in
                             if isHovered {
-                                show(monitor: monitor)
+                                viewModel.show(monitor: monitor)
                             } else {
-                                hide()
+                                viewModel.dismissPlaceholder()
                             }
                         }
                     Text("Monitor \(monitor.number)")
@@ -52,8 +54,23 @@ struct ContentView: View {
                 }
                 
                 HStack {
-                    Text("Set config on startup")
+                    Text("Apply config on startup")
+                    Image(systemName: "questionmark.circle.fill")
+                        .onTapGesture {
+                            isHelpScreenShowing.toggle()
+                        }
+                        .popover(isPresented: $isHelpScreenShowing) {
+                            VStack(alignment: .leading) {
+                                Text("Set the default resolution on startup.")
+                                    .bold()
+                                Text("")
+                                Text("If you are using multiple 4K monitors with a M1 Mac and DisplayLink,\nsave the configuration on DisplayManager and activate this feature. \nThis will auto-set all the monitors resolution to your config on user login.")
+                            }
+                            .padding()
+                        }
+                    
                     Spacer()
+                    
                     Toggle("", isOn: loginAgentBinding)
                         .toggleStyle(SwitchToggleStyle())
                         .labelsHidden()
@@ -66,36 +83,6 @@ struct ContentView: View {
             }
         }
         .padding()
-    }
-    
-    func show(monitor: Monitor) {
-        guard let screen = NSScreen.screens.first(where: { screen in
-            let key = NSDeviceDescriptionKey(rawValue: "NSScreenNumber")
-            return screen.deviceDescription[key] as? UInt32 == monitor.number
-        }) else {
-            return
-        }
-        
-        hide()
-        
-        let vc = NSHostingController(rootView: PlaceholderView(monitor: monitor))
-        vc.view.frame = screen.frame
-        vc.view.layer?.backgroundColor = .clear
-        
-        let newWindow = NSPanel(contentViewController: vc)
-        newWindow.styleMask =  NSWindow.StyleMask.hudWindow
-        newWindow.setFrameOrigin(screen.visibleFrame.origin)
-        newWindow.isMovable = false
-        newWindow.isMovableByWindowBackground = false
-        
-        viewModel.presentedWindow = NSWindowController(window: newWindow)
-        viewModel.presentedWindow?.showWindow(nil)
-        
-        NSApp.keyWindow?.makeKeyAndOrderFront(nil)
-    }
-    
-    func hide() {
-        viewModel.dismissPlaceholder()        
     }
     
     var loginAgentBinding: Binding<Bool> {

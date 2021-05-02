@@ -53,6 +53,32 @@ class ViewModel: ObservableObject {
     }
     
     
+    func show(monitor: Monitor) {
+        guard let screen = NSScreen.screens.first(where: { screen in
+            let key = NSDeviceDescriptionKey(rawValue: "NSScreenNumber")
+            return screen.deviceDescription[key] as? UInt32 == monitor.number
+        }) else {
+            return
+        }
+        
+        dismissPlaceholder()
+        
+        let vc = NSHostingController(rootView: PlaceholderView(monitor: monitor))
+        vc.view.frame = screen.frame
+        vc.view.layer?.backgroundColor = .clear
+        
+        let newWindow = NSPanel(contentViewController: vc)
+        newWindow.styleMask =  NSWindow.StyleMask.hudWindow
+        newWindow.setFrameOrigin(screen.visibleFrame.origin)
+        newWindow.isMovable = false
+        newWindow.isMovableByWindowBackground = false
+        
+        presentedWindow = NSWindowController(window: newWindow)
+        presentedWindow?.showWindow(nil)
+        
+        NSApp.keyWindow?.makeKeyAndOrderFront(nil)
+    }
+    
     func dismissPlaceholder() {
         hoveredMonitor = nil
         

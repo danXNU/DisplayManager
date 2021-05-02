@@ -18,6 +18,7 @@ class ViewModel: ObservableObject {
     
     @Published var defaultConfig: Config = Config.getDefault()
     @Published var loginServiceActive: Bool = false
+    @Published var statusBarAgentActive: Bool = false
     
     var presentedWindow: NSWindowController?
     
@@ -25,6 +26,7 @@ class ViewModel: ObservableObject {
     
     init() {
         loginServiceActive = isServiceRunning
+        statusBarAgentActive = isAgentRunning
         
         let nc = NotificationCenter.default
             nc.addObserver(self,
@@ -110,8 +112,17 @@ class ViewModel: ObservableObject {
         print("Success: \(success)")
     }
     
+    func activateAgentOnStartup(activate: Bool = true) {
+        let success = SMLoginItemSetEnabled(statusBarAgentBundle as CFString, activate)
+        print("Success: \(success)")
+    }
+    
     private var isServiceRunning: Bool {
         return NSWorkspace.shared.runningApplications.contains(where: { $0.bundleIdentifier == loginHelperBundle })
+    }
+    
+    private var isAgentRunning: Bool {
+        return NSWorkspace.shared.runningApplications.contains(where: { $0.bundleIdentifier == statusBarAgentBundle })
     }
     
     var hasChanged: Bool {

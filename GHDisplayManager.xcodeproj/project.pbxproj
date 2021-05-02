@@ -11,11 +11,23 @@
 		3743F6E3263E9CD20049B8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3743F6E2263E9CD20049B8B4 /* Assets.xcassets */; };
 		3743F6E6263E9CD20049B8B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3743F6E5263E9CD20049B8B4 /* Preview Assets.xcassets */; };
 		3743F6E9263E9CD20049B8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3743F6E7263E9CD20049B8B4 /* Main.storyboard */; };
+		3760988A263EC4D4006F25A2 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37609889263EC4D4006F25A2 /* AppDelegate.swift */; };
+		3760988E263EC4D5006F25A2 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3760988D263EC4D5006F25A2 /* Assets.xcassets */; };
+		37609891263EC4D5006F25A2 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37609890263EC4D5006F25A2 /* Preview Assets.xcassets */; };
+		37609894263EC4D5006F25A2 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 37609892263EC4D5006F25A2 /* Main.storyboard */; };
+		3760989D263EC6F1006F25A2 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF69263B1A160037B9FF /* ContentView.swift */; };
+		3760989E263EC6F4006F25A2 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
+		3760989F263EC859006F25A2 /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37991C05263EACA70043614A /* Properties.swift */; };
+		376098A0263EC85D006F25A2 /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* Config.swift */; };
+		376098A1263EC860006F25A2 /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
+		376098A2263EC863006F25A2 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
+		376098A3263EC868006F25A2 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
+		376098A6263ECBB0006F25A2 /* DisplayManager-Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		37991BFE263E9F0E0043614A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
 		37991BFF263E9F110043614A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37991C00263E9F230043614A /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 		37991C02263EA04C0043614A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* Config.swift */; };
-		37991C04263EAC1F0043614A /* LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3743F6DC263E9CD10049B8B4 /* LoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37991C04263EAC1F0043614A /* DisplayManager-LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3743F6DC263E9CD10049B8B4 /* DisplayManager-LoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
 		37991C06263EACA70043614A /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37991C05263EACA70043614A /* Properties.swift */; };
 		37991C07263EACA70043614A /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37991C05263EACA70043614A /* Properties.swift */; };
 		37CECF68263B1A160037B9FF /* UIDisplayManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */; };
@@ -27,7 +39,6 @@
 		37CECF81263C2E970037B9FF /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
 		37CECF83263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37CECF84263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
-		37CECF86263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
 		37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
 		37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF89263C9FF60037B9FF /* SettingsManager.swift */; };
 		37CECF8C263CA14E0037B9FF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* Config.swift */; };
@@ -36,13 +47,23 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		376098A5263ECB9D006F25A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				376098A6263ECBB0006F25A2 /* DisplayManager-Agent.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37991C03263EABFB0043614A /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = Contents/Library/LoginItems;
 			dstSubfolderSpec = 1;
 			files = (
-				37991C04263EAC1F0043614A /* LoginHelper.app in CopyFiles */,
+				37991C04263EAC1F0043614A /* DisplayManager-LoginHelper.app in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -58,13 +79,21 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
-		3743F6DC263E9CD10049B8B4 /* LoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3743F6DC263E9CD10049B8B4 /* DisplayManager-LoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DisplayManager-LoginHelper.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		3743F6DE263E9CD10049B8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		3743F6E2263E9CD20049B8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3743F6E5263E9CD20049B8B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
 		3743F6E8263E9CD20049B8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		3743F6EA263E9CD20049B8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		3743F6EB263E9CD20049B8B4 /* LoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginHelper.entitlements; sourceTree = "<group>"; };
+		37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "DisplayManager-Agent.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		37609889263EC4D4006F25A2 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3760988D263EC4D5006F25A2 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		37609890263EC4D5006F25A2 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		37609893263EC4D5006F25A2 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		37609895263EC4D5006F25A2 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		37609896263EC4D5006F25A2 /* DisplayManagerAgent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = DisplayManagerAgent.entitlements; sourceTree = "<group>"; };
+		376098A4263EC87E006F25A2 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		37991C01263E9F6B0043614A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		37991C05263EACA70043614A /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		37CECF65263B1A160037B9FF /* UIDisplayManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDisplayManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -90,6 +119,13 @@
 
 /* Begin PBXFrameworksBuildPhase section */
 		3743F6D9263E9CD10049B8B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37609884263EC4D4006F25A2 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -135,14 +171,60 @@
 			path = "Preview Content";
 			sourceTree = "<group>";
 		};
+		37609888263EC4D4006F25A2 /* DisplayManagerAgent */ = {
+			isa = PBXGroup;
+			children = (
+				37609889263EC4D4006F25A2 /* AppDelegate.swift */,
+				3760988D263EC4D5006F25A2 /* Assets.xcassets */,
+				37609892263EC4D5006F25A2 /* Main.storyboard */,
+				37609895263EC4D5006F25A2 /* Info.plist */,
+				37609896263EC4D5006F25A2 /* DisplayManagerAgent.entitlements */,
+				3760988F263EC4D5006F25A2 /* Preview Content */,
+				376098A4263EC87E006F25A2 /* BridgingHeader.h */,
+			);
+			path = DisplayManagerAgent;
+			sourceTree = "<group>";
+		};
+		3760988F263EC4D5006F25A2 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				37609890263EC4D5006F25A2 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		3760989A263EC54F006F25A2 /* Shared */ = {
+			isa = PBXGroup;
+			children = (
+				3760989C263EC6CE006F25A2 /* ViewModel */,
+				3760989B263EC556006F25A2 /* GUI */,
+				37CECF75263B1A380037B9FF /* Model */,
+			);
+			path = Shared;
+			sourceTree = "<group>";
+		};
+		3760989B263EC556006F25A2 /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				37CECF69263B1A160037B9FF /* ContentView.swift */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		3760989C263EC6CE006F25A2 /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				37CECF85263C37A80037B9FF /* ViewModel.swift */,
+			);
+			path = ViewModel;
+			sourceTree = "<group>";
+		};
 		37CECF66263B1A160037B9FF /* UIDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
 				37CECF88263C9F8A0037B9FF /* SupportingFiles */,
 				37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */,
 				37CECF77263B1B830037B9FF /* BridgingHeader.h */,
-				37CECF85263C37A80037B9FF /* ViewModel.swift */,
-				37CECF69263B1A160037B9FF /* ContentView.swift */,
 				37CECF89263C9FF60037B9FF /* SettingsManager.swift */,
 			);
 			path = UIDisplayManager;
@@ -185,10 +267,11 @@
 		37F078562638B4C200BA3320 = {
 			isa = PBXGroup;
 			children = (
-				37CECF75263B1A380037B9FF /* Model */,
+				3760989A263EC54F006F25A2 /* Shared */,
 				37F078612638B4C200BA3320 /* GHDisplayManager */,
 				37CECF66263B1A160037B9FF /* UIDisplayManager */,
 				3743F6DD263E9CD10049B8B4 /* LoginHelper */,
+				37609888263EC4D4006F25A2 /* DisplayManagerAgent */,
 				37F078602638B4C200BA3320 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -198,7 +281,8 @@
 			children = (
 				37F0785F2638B4C200BA3320 /* GHDisplayManager */,
 				37CECF65263B1A160037B9FF /* UIDisplayManager.app */,
-				3743F6DC263E9CD10049B8B4 /* LoginHelper.app */,
+				3743F6DC263E9CD10049B8B4 /* DisplayManager-LoginHelper.app */,
+				37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -214,9 +298,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		3743F6DB263E9CD10049B8B4 /* LoginHelper */ = {
+		3743F6DB263E9CD10049B8B4 /* DisplayManager-LoginHelper */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 3743F6EC263E9CD20049B8B4 /* Build configuration list for PBXNativeTarget "LoginHelper" */;
+			buildConfigurationList = 3743F6EC263E9CD20049B8B4 /* Build configuration list for PBXNativeTarget "DisplayManager-LoginHelper" */;
 			buildPhases = (
 				3743F6D8263E9CD10049B8B4 /* Sources */,
 				3743F6D9263E9CD10049B8B4 /* Frameworks */,
@@ -226,9 +310,26 @@
 			);
 			dependencies = (
 			);
-			name = LoginHelper;
+			name = "DisplayManager-LoginHelper";
 			productName = LoginHelper;
-			productReference = 3743F6DC263E9CD10049B8B4 /* LoginHelper.app */;
+			productReference = 3743F6DC263E9CD10049B8B4 /* DisplayManager-LoginHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
+		37609886263EC4D4006F25A2 /* DisplayManager-Agent */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 37609899263EC4D5006F25A2 /* Build configuration list for PBXNativeTarget "DisplayManager-Agent" */;
+			buildPhases = (
+				37609883263EC4D4006F25A2 /* Sources */,
+				37609884263EC4D4006F25A2 /* Frameworks */,
+				37609885263EC4D4006F25A2 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "DisplayManager-Agent";
+			productName = DisplayManagerAgent;
+			productReference = 37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */;
 			productType = "com.apple.product-type.application";
 		};
 		37CECF64263B1A160037B9FF /* UIDisplayManager */ = {
@@ -239,6 +340,7 @@
 				37CECF62263B1A160037B9FF /* Frameworks */,
 				37CECF63263B1A160037B9FF /* Resources */,
 				37991C03263EABFB0043614A /* CopyFiles */,
+				376098A5263ECB9D006F25A2 /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -278,6 +380,9 @@
 					3743F6DB263E9CD10049B8B4 = {
 						CreatedOnToolsVersion = 12.5;
 					};
+					37609886263EC4D4006F25A2 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					37CECF64263B1A160037B9FF = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -302,7 +407,8 @@
 			targets = (
 				37F0785E2638B4C200BA3320 /* GHDisplayManager */,
 				37CECF64263B1A160037B9FF /* UIDisplayManager */,
-				3743F6DB263E9CD10049B8B4 /* LoginHelper */,
+				3743F6DB263E9CD10049B8B4 /* DisplayManager-LoginHelper */,
+				37609886263EC4D4006F25A2 /* DisplayManager-Agent */,
 			);
 		};
 /* End PBXProject section */
@@ -315,6 +421,16 @@
 				3743F6E9263E9CD20049B8B4 /* Main.storyboard in Resources */,
 				3743F6E6263E9CD20049B8B4 /* Preview Assets.xcassets in Resources */,
 				3743F6E3263E9CD20049B8B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		37609885263EC4D4006F25A2 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37609894263EC4D5006F25A2 /* Main.storyboard in Resources */,
+				37609891263EC4D5006F25A2 /* Preview Assets.xcassets in Resources */,
+				3760988E263EC4D5006F25A2 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -343,6 +459,21 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
+		37609883263EC4D4006F25A2 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3760989F263EC859006F25A2 /* Properties.swift in Sources */,
+				3760988A263EC4D4006F25A2 /* AppDelegate.swift in Sources */,
+				376098A2263EC863006F25A2 /* Monitor.swift in Sources */,
+				376098A1263EC860006F25A2 /* Mode.swift in Sources */,
+				376098A3263EC868006F25A2 /* DisplayManager.m in Sources */,
+				376098A0263EC85D006F25A2 /* Config.swift in Sources */,
+				3760989E263EC6F4006F25A2 /* ViewModel.swift in Sources */,
+				3760989D263EC6F1006F25A2 /* ContentView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37CECF61263B1A160037B9FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -363,7 +494,6 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				37CECF86263C37A80037B9FF /* ViewModel.swift in Sources */,
 				37F078712638B57B00BA3320 /* DisplayManager.m in Sources */,
 				37CECF80263C2E970037B9FF /* Monitor.swift in Sources */,
 				37CECF83263C37270037B9FF /* Mode.swift in Sources */,
@@ -378,6 +508,14 @@
 			isa = PBXVariantGroup;
 			children = (
 				3743F6E8263E9CD20049B8B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		37609892263EC4D5006F25A2 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				37609893263EC4D5006F25A2 /* Base */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -433,6 +571,59 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.LoginHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = LoginHelper/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		37609897263EC4D5006F25A2 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DisplayManagerAgent/DisplayManagerAgent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DisplayManagerAgent/Preview Content\"";
+				DEVELOPMENT_TEAM = R779A64KR9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DisplayManagerAgent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager.agent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = DisplayManagerAgent/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		37609898263EC4D5006F25A2 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = DisplayManagerAgent/DisplayManagerAgent.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"DisplayManagerAgent/Preview Content\"";
+				DEVELOPMENT_TEAM = R779A64KR9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = DisplayManagerAgent/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager.agent;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = DisplayManagerAgent/BridgingHeader.h;
 				SWIFT_OPTIMIZATION_LEVEL = "-O";
 				SWIFT_VERSION = 5.0;
 			};
@@ -650,11 +841,20 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		3743F6EC263E9CD20049B8B4 /* Build configuration list for PBXNativeTarget "LoginHelper" */ = {
+		3743F6EC263E9CD20049B8B4 /* Build configuration list for PBXNativeTarget "DisplayManager-LoginHelper" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				3743F6ED263E9CD20049B8B4 /* Debug */,
 				3743F6EE263E9CD20049B8B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		37609899263EC4D5006F25A2 /* Build configuration list for PBXNativeTarget "DisplayManager-Agent" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				37609897263EC4D5006F25A2 /* Debug */,
+				37609898263EC4D5006F25A2 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

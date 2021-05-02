@@ -76,16 +76,16 @@ int main(int argc, const char * argv[]) {
             }
         } else {
             printf("\nUsage:\n");
-            printf("    -list-monitors: per mostrare l'elenco dei monitor e le loro attuali modalità\n\n");
-            printf("    -info [MONITOR_UUID]: per mostrare tutte le modalità (risoluzioni) disponibili per questo monitor ID.\n");
-            printf("        L'ID lo si può ottenere usando il comando '-list-monitors'\n\n");
-            printf("    -save: salva in un JSON nella attuale directory la configurazione degli attuali monitor\n\n");
-            printf("    -load: carica la configurazione dal JSON posizionato nell'attuale directory\n\n");
+            printf("    -list-monitors: shows monitor list and their current modes (resolution id)\n\n");
+            printf("    -info [MONITOR_UUID]: show all available modes (resolutions) for this monitor ID.\n");
+            printf("        The monitor ID can be found with '-list-monitors' parameter\n\n");
+            printf("    -save: save the current monitors configuration in a JSON file (you can set the output file path. Default is the current running location)\n\n");
+            printf("    -load: load and set the monitors configuration from a JSON file (you can specify the file path; default is current running location)\n\n");
             
             printf("\n\n---\n");
-            printf("\nIl JSON di salvataggio è strutturato in questo modo:\n");
+            printf("\nThe JSON config file has this structure:\n");
             printf("    [ { 'MonitorUUID' : 'ModeNumber' }, ... ]\n\n");
-            printf("Esempio: \n\t{\n\t\t\"0BE85EB5-65D4-A709-0857-D6964E3302DB\" : 93, \n\t\t\"37D8832A-2D66-02CA-B9F7-8F30A301B230\" : 8 \n\t}\n");
+            printf("Example: \n\t{\n\t\t\"0BE85EB5-65D4-A709-0857-D6964E3302DB\" : 93, \n\t\t\"37D8832A-2D66-02CA-B9F7-8F30A301B230\" : 8 \n\t}\n");
         }
         
     }

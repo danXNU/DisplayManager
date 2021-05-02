@@ -23,7 +23,7 @@
 		376098A2263EC863006F25A2 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
 		376098A3263EC868006F25A2 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 		376098A6263ECBB0006F25A2 /* DisplayManager-Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
-		376098A8263ED75F006F25A2 /* DisplayManager in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37F0785F2638B4C200BA3320 /* DisplayManager */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
+		376098A8263ED75F006F25A2 /* display-manager in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37F0785F2638B4C200BA3320 /* display-manager */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		37991BFE263E9F0E0043614A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
 		37991BFF263E9F110043614A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37991C00263E9F230043614A /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
@@ -41,7 +41,6 @@
 		37CECF83263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37CECF84263C37270037B9FF /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
-		37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF89263C9FF60037B9FF /* SettingsManager.swift */; };
 		37CECF8C263CA14E0037B9FF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* Config.swift */; };
 		37F0786C2638B4D400BA3320 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F0786B2638B4D400BA3320 /* main.m */; };
 		37F078712638B57B00BA3320 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
@@ -64,7 +63,7 @@
 			dstPath = "";
 			dstSubfolderSpec = 7;
 			files = (
-				376098A8263ED75F006F25A2 /* DisplayManager in CopyFiles */,
+				376098A8263ED75F006F25A2 /* display-manager in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -107,7 +106,7 @@
 		376098A4263EC87E006F25A2 /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		37991C01263E9F6B0043614A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
 		37991C05263EACA70043614A /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
-		37CECF65263B1A160037B9FF /* UIDisplayManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDisplayManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		37CECF65263B1A160037B9FF /* DisplayManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DisplayManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDisplayManagerApp.swift; sourceTree = "<group>"; };
 		37CECF69263B1A160037B9FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		37CECF6B263B1A170037B9FF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -119,9 +118,8 @@
 		37CECF7F263C2E970037B9FF /* Monitor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Monitor.swift; sourceTree = "<group>"; };
 		37CECF82263C37270037B9FF /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		37CECF85263C37A80037B9FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
-		37CECF89263C9FF60037B9FF /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
 		37CECF8B263CA14E0037B9FF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
-		37F0785F2638B4C200BA3320 /* DisplayManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = DisplayManager; sourceTree = BUILT_PRODUCTS_DIR; };
+		37F0785F2638B4C200BA3320 /* display-manager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = "display-manager"; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F0786A2638B4D400BA3320 /* CoreGraphicsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsAPI.h; sourceTree = "<group>"; };
 		37F0786B2638B4D400BA3320 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		37F0786F2638B57B00BA3320 /* DisplayManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DisplayManager.h; sourceTree = "<group>"; };
@@ -236,7 +234,6 @@
 				37CECF88263C9F8A0037B9FF /* SupportingFiles */,
 				37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */,
 				37CECF77263B1B830037B9FF /* BridgingHeader.h */,
-				37CECF89263C9FF60037B9FF /* SettingsManager.swift */,
 			);
 			path = UIDisplayManager;
 			sourceTree = "<group>";
@@ -290,8 +287,8 @@
 		37F078602638B4C200BA3320 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				37F0785F2638B4C200BA3320 /* DisplayManager */,
-				37CECF65263B1A160037B9FF /* UIDisplayManager.app */,
+				37F0785F2638B4C200BA3320 /* display-manager */,
+				37CECF65263B1A160037B9FF /* DisplayManager.app */,
 				3743F6DC263E9CD10049B8B4 /* DisplayManager-LoginHelper.app */,
 				37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */,
 			);
@@ -343,9 +340,9 @@
 			productReference = 37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */;
 			productType = "com.apple.product-type.application";
 		};
-		37CECF64263B1A160037B9FF /* UIDisplayManager */ = {
+		37CECF64263B1A160037B9FF /* DisplayManager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "UIDisplayManager" */;
+			buildConfigurationList = 37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "DisplayManager" */;
 			buildPhases = (
 				37CECF61263B1A160037B9FF /* Sources */,
 				37CECF62263B1A160037B9FF /* Frameworks */,
@@ -358,14 +355,14 @@
 			);
 			dependencies = (
 			);
-			name = UIDisplayManager;
+			name = DisplayManager;
 			productName = UIDisplayManager;
-			productReference = 37CECF65263B1A160037B9FF /* UIDisplayManager.app */;
+			productReference = 37CECF65263B1A160037B9FF /* DisplayManager.app */;
 			productType = "com.apple.product-type.application";
 		};
-		37F0785E2638B4C200BA3320 /* DisplayManager */ = {
+		37F0785E2638B4C200BA3320 /* display-manager */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 37F078662638B4C200BA3320 /* Build configuration list for PBXNativeTarget "DisplayManager" */;
+			buildConfigurationList = 37F078662638B4C200BA3320 /* Build configuration list for PBXNativeTarget "display-manager" */;
 			buildPhases = (
 				37F0785B2638B4C200BA3320 /* Sources */,
 				37F0785C2638B4C200BA3320 /* Frameworks */,
@@ -375,9 +372,9 @@
 			);
 			dependencies = (
 			);
-			name = DisplayManager;
+			name = "display-manager";
 			productName = GHDisplayManager;
-			productReference = 37F0785F2638B4C200BA3320 /* DisplayManager */;
+			productReference = 37F0785F2638B4C200BA3320 /* display-manager */;
 			productType = "com.apple.product-type.tool";
 		};
 /* End PBXNativeTarget section */
@@ -417,8 +414,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				37F0785E2638B4C200BA3320 /* DisplayManager */,
-				37CECF64263B1A160037B9FF /* UIDisplayManager */,
+				37F0785E2638B4C200BA3320 /* display-manager */,
+				37CECF64263B1A160037B9FF /* DisplayManager */,
 				3743F6DB263E9CD10049B8B4 /* DisplayManager-LoginHelper */,
 				37609886263EC4D4006F25A2 /* DisplayManager-Agent */,
 			);
@@ -495,7 +492,6 @@
 				37CECF8C263CA14E0037B9FF /* Config.swift in Sources */,
 				37CECF84263C37270037B9FF /* Mode.swift in Sources */,
 				37CECF6A263B1A160037B9FF /* ContentView.swift in Sources */,
-				37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */,
 				37CECF76263B1A4C0037B9FF /* DisplayManager.m in Sources */,
 				37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */,
 				37CECF68263B1A160037B9FF /* UIDisplayManagerApp.swift in Sources */,
@@ -541,6 +537,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LoginHelper/LoginHelper.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LoginHelper/Preview Content\"";
@@ -552,7 +549,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.LoginHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -568,6 +565,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = LoginHelper/LoginHelper.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"LoginHelper/Preview Content\"";
@@ -579,7 +577,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.LoginHelper;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = LoginHelper/BridgingHeader.h;
@@ -594,6 +592,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DisplayManagerAgent/DisplayManagerAgent.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DisplayManagerAgent/Preview Content\"";
@@ -605,7 +604,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager.agent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -621,6 +620,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = DisplayManagerAgent/DisplayManagerAgent.entitlements;
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"DisplayManagerAgent/Preview Content\"";
@@ -632,7 +632,7 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager.agent;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_OBJC_BRIDGING_HEADER = DisplayManagerAgent/BridgingHeader.h;
@@ -647,7 +647,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/SupportingFiles/UIDisplayManager.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/SupportingFiles/Preview Content\"";
@@ -659,7 +659,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
@@ -675,7 +676,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/SupportingFiles/UIDisplayManager.entitlements;
-				CODE_SIGN_IDENTITY = "Apple Development";
+				CODE_SIGN_IDENTITY = "-";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/SupportingFiles/Preview Content\"";
@@ -687,7 +688,8 @@
 					"$(inherited)",
 					"@executable_path/../Frameworks",
 				);
-				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				MACOSX_DEPLOYMENT_TARGET = 11.0;
+				MARKETING_VERSION = 0.1;
 				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
@@ -871,7 +873,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "UIDisplayManager" */ = {
+		37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "DisplayManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37CECF72263B1A170037B9FF /* Debug */,
@@ -889,7 +891,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		37F078662638B4C200BA3320 /* Build configuration list for PBXNativeTarget "DisplayManager" */ = {
+		37F078662638B4C200BA3320 /* Build configuration list for PBXNativeTarget "display-manager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				37F078672638B4C200BA3320 /* Debug */,

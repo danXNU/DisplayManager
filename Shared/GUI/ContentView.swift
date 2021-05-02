@@ -14,6 +14,9 @@ struct ContentView: View {
     
     @State var isStatusBarItem: Bool = false
     
+    @AppStorage("startAgentOnLogin", store: UserDefaults(suiteName: "R779A64KR9.com.danxnu.displaymanager"))
+    var startAgentOnLogin: Bool = false
+    
     var body: some View {
         VStack {
             ForEach(viewModel.monitors, id: \.number) { monitor in
@@ -123,9 +126,9 @@ struct ContentView: View {
     
     var loginAgentUIBinding: Binding<Bool> {
         Binding {
-            viewModel.statusBarAgentActive
+            startAgentOnLogin
         } set: { active in
-            viewModel.statusBarAgentActive = active
+            startAgentOnLogin = active
             if active {
                 viewModel.activateAgentOnStartup()
             } else {

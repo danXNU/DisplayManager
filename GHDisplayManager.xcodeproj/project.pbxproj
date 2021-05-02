@@ -7,6 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3743F6DF263E9CD10049B8B4 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3743F6DE263E9CD10049B8B4 /* AppDelegate.swift */; };
+		3743F6E3263E9CD20049B8B4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3743F6E2263E9CD20049B8B4 /* Assets.xcassets */; };
+		3743F6E6263E9CD20049B8B4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3743F6E5263E9CD20049B8B4 /* Preview Assets.xcassets */; };
+		3743F6E9263E9CD20049B8B4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3743F6E7263E9CD20049B8B4 /* Main.storyboard */; };
+		37991BFE263E9F0E0043614A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
+		37991BFF263E9F110043614A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
+		37991C00263E9F230043614A /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
+		37991C02263EA04C0043614A /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* Config.swift */; };
+		37991C04263EAC1F0043614A /* LoginHelper.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 3743F6DC263E9CD10049B8B4 /* LoginHelper.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		37991C06263EACA70043614A /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37991C05263EACA70043614A /* Properties.swift */; };
+		37991C07263EACA70043614A /* Properties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37991C05263EACA70043614A /* Properties.swift */; };
 		37CECF68263B1A160037B9FF /* UIDisplayManagerApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */; };
 		37CECF6A263B1A160037B9FF /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF69263B1A160037B9FF /* ContentView.swift */; };
 		37CECF6C263B1A170037B9FF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 37CECF6B263B1A170037B9FF /* Assets.xcassets */; };
@@ -19,12 +30,22 @@
 		37CECF86263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
 		37CECF87263C37A80037B9FF /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF85263C37A80037B9FF /* ViewModel.swift */; };
 		37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF89263C9FF60037B9FF /* SettingsManager.swift */; };
-		37CECF8C263CA14E0037B9FF /* DefaultConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* DefaultConfig.swift */; };
+		37CECF8C263CA14E0037B9FF /* Config.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF8B263CA14E0037B9FF /* Config.swift */; };
 		37F0786C2638B4D400BA3320 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F0786B2638B4D400BA3320 /* main.m */; };
 		37F078712638B57B00BA3320 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
+		37991C03263EABFB0043614A /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = Contents/Library/LoginItems;
+			dstSubfolderSpec = 1;
+			files = (
+				37991C04263EAC1F0043614A /* LoginHelper.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37F0785D2638B4C200BA3320 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
@@ -37,6 +58,15 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		3743F6DC263E9CD10049B8B4 /* LoginHelper.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LoginHelper.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		3743F6DE263E9CD10049B8B4 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		3743F6E2263E9CD20049B8B4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		3743F6E5263E9CD20049B8B4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		3743F6E8263E9CD20049B8B4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		3743F6EA263E9CD20049B8B4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3743F6EB263E9CD20049B8B4 /* LoginHelper.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = LoginHelper.entitlements; sourceTree = "<group>"; };
+		37991C01263E9F6B0043614A /* BridgingHeader.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BridgingHeader.h; sourceTree = "<group>"; };
+		37991C05263EACA70043614A /* Properties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Properties.swift; sourceTree = "<group>"; };
 		37CECF65263B1A160037B9FF /* UIDisplayManager.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIDisplayManager.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		37CECF67263B1A160037B9FF /* UIDisplayManagerApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIDisplayManagerApp.swift; sourceTree = "<group>"; };
 		37CECF69263B1A160037B9FF /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -50,7 +80,7 @@
 		37CECF82263C37270037B9FF /* Mode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Mode.swift; sourceTree = "<group>"; };
 		37CECF85263C37A80037B9FF /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		37CECF89263C9FF60037B9FF /* SettingsManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsManager.swift; sourceTree = "<group>"; };
-		37CECF8B263CA14E0037B9FF /* DefaultConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultConfig.swift; sourceTree = "<group>"; };
+		37CECF8B263CA14E0037B9FF /* Config.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Config.swift; sourceTree = "<group>"; };
 		37F0785F2638B4C200BA3320 /* GHDisplayManager */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = GHDisplayManager; sourceTree = BUILT_PRODUCTS_DIR; };
 		37F0786A2638B4D400BA3320 /* CoreGraphicsAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CoreGraphicsAPI.h; sourceTree = "<group>"; };
 		37F0786B2638B4D400BA3320 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
@@ -59,6 +89,13 @@
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
+		3743F6D9263E9CD10049B8B4 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37CECF62263B1A160037B9FF /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
@@ -76,6 +113,28 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		3743F6DD263E9CD10049B8B4 /* LoginHelper */ = {
+			isa = PBXGroup;
+			children = (
+				3743F6DE263E9CD10049B8B4 /* AppDelegate.swift */,
+				3743F6E2263E9CD20049B8B4 /* Assets.xcassets */,
+				3743F6E7263E9CD20049B8B4 /* Main.storyboard */,
+				3743F6EA263E9CD20049B8B4 /* Info.plist */,
+				3743F6EB263E9CD20049B8B4 /* LoginHelper.entitlements */,
+				3743F6E4263E9CD20049B8B4 /* Preview Content */,
+				37991C01263E9F6B0043614A /* BridgingHeader.h */,
+			);
+			path = LoginHelper;
+			sourceTree = "<group>";
+		};
+		3743F6E4263E9CD20049B8B4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				3743F6E5263E9CD20049B8B4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		37CECF66263B1A160037B9FF /* UIDisplayManager */ = {
 			isa = PBXGroup;
 			children = (
@@ -85,7 +144,6 @@
 				37CECF85263C37A80037B9FF /* ViewModel.swift */,
 				37CECF69263B1A160037B9FF /* ContentView.swift */,
 				37CECF89263C9FF60037B9FF /* SettingsManager.swift */,
-				37CECF8B263CA14E0037B9FF /* DefaultConfig.swift */,
 			);
 			path = UIDisplayManager;
 			sourceTree = "<group>";
@@ -107,6 +165,8 @@
 				37CECF7E263C2E960037B9FF /* GHDisplayManager-Bridging-Header.h */,
 				37CECF7F263C2E970037B9FF /* Monitor.swift */,
 				37CECF82263C37270037B9FF /* Mode.swift */,
+				37CECF8B263CA14E0037B9FF /* Config.swift */,
+				37991C05263EACA70043614A /* Properties.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -128,6 +188,7 @@
 				37CECF75263B1A380037B9FF /* Model */,
 				37F078612638B4C200BA3320 /* GHDisplayManager */,
 				37CECF66263B1A160037B9FF /* UIDisplayManager */,
+				3743F6DD263E9CD10049B8B4 /* LoginHelper */,
 				37F078602638B4C200BA3320 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -137,6 +198,7 @@
 			children = (
 				37F0785F2638B4C200BA3320 /* GHDisplayManager */,
 				37CECF65263B1A160037B9FF /* UIDisplayManager.app */,
+				3743F6DC263E9CD10049B8B4 /* LoginHelper.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -152,6 +214,23 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
+		3743F6DB263E9CD10049B8B4 /* LoginHelper */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 3743F6EC263E9CD20049B8B4 /* Build configuration list for PBXNativeTarget "LoginHelper" */;
+			buildPhases = (
+				3743F6D8263E9CD10049B8B4 /* Sources */,
+				3743F6D9263E9CD10049B8B4 /* Frameworks */,
+				3743F6DA263E9CD10049B8B4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LoginHelper;
+			productName = LoginHelper;
+			productReference = 3743F6DC263E9CD10049B8B4 /* LoginHelper.app */;
+			productType = "com.apple.product-type.application";
+		};
 		37CECF64263B1A160037B9FF /* UIDisplayManager */ = {
 			isa = PBXNativeTarget;
 			buildConfigurationList = 37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "UIDisplayManager" */;
@@ -159,6 +238,7 @@
 				37CECF61263B1A160037B9FF /* Sources */,
 				37CECF62263B1A160037B9FF /* Frameworks */,
 				37CECF63263B1A160037B9FF /* Resources */,
+				37991C03263EABFB0043614A /* CopyFiles */,
 			);
 			buildRules = (
 			);
@@ -195,6 +275,9 @@
 				LastSwiftUpdateCheck = 1250;
 				LastUpgradeCheck = 1250;
 				TargetAttributes = {
+					3743F6DB263E9CD10049B8B4 = {
+						CreatedOnToolsVersion = 12.5;
+					};
 					37CECF64263B1A160037B9FF = {
 						CreatedOnToolsVersion = 12.5;
 					};
@@ -219,11 +302,22 @@
 			targets = (
 				37F0785E2638B4C200BA3320 /* GHDisplayManager */,
 				37CECF64263B1A160037B9FF /* UIDisplayManager */,
+				3743F6DB263E9CD10049B8B4 /* LoginHelper */,
 			);
 		};
 /* End PBXProject section */
 
 /* Begin PBXResourcesBuildPhase section */
+		3743F6DA263E9CD10049B8B4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				3743F6E9263E9CD20049B8B4 /* Main.storyboard in Resources */,
+				3743F6E6263E9CD20049B8B4 /* Preview Assets.xcassets in Resources */,
+				3743F6E3263E9CD20049B8B4 /* Assets.xcassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37CECF63263B1A160037B9FF /* Resources */ = {
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
@@ -236,12 +330,26 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
+		3743F6D8263E9CD10049B8B4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				37991C07263EACA70043614A /* Properties.swift in Sources */,
+				37991BFE263E9F0E0043614A /* Monitor.swift in Sources */,
+				37991BFF263E9F110043614A /* Mode.swift in Sources */,
+				3743F6DF263E9CD10049B8B4 /* AppDelegate.swift in Sources */,
+				37991C00263E9F230043614A /* DisplayManager.m in Sources */,
+				37991C02263EA04C0043614A /* Config.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
 		37CECF61263B1A160037B9FF /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				37991C06263EACA70043614A /* Properties.swift in Sources */,
 				37CECF81263C2E970037B9FF /* Monitor.swift in Sources */,
-				37CECF8C263CA14E0037B9FF /* DefaultConfig.swift in Sources */,
+				37CECF8C263CA14E0037B9FF /* Config.swift in Sources */,
 				37CECF84263C37270037B9FF /* Mode.swift in Sources */,
 				37CECF6A263B1A160037B9FF /* ContentView.swift in Sources */,
 				37CECF8A263C9FF60037B9FF /* SettingsManager.swift in Sources */,
@@ -265,14 +373,78 @@
 		};
 /* End PBXSourcesBuildPhase section */
 
+/* Begin PBXVariantGroup section */
+		3743F6E7263E9CD20049B8B4 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				3743F6E8263E9CD20049B8B4 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
 /* Begin XCBuildConfiguration section */
+		3743F6ED263E9CD20049B8B4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoginHelper/LoginHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"LoginHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = R779A64KR9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LoginHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.LoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OBJC_BRIDGING_HEADER = LoginHelper/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		3743F6EE263E9CD20049B8B4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = LoginHelper/LoginHelper.entitlements;
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"LoginHelper/Preview Content\"";
+				DEVELOPMENT_TEAM = R779A64KR9;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = LoginHelper/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.2;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.LoginHelper;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_OBJC_BRIDGING_HEADER = LoginHelper/BridgingHeader.h;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 		37CECF72263B1A170037B9FF /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/UIDisplayManager.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/SupportingFiles/UIDisplayManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/SupportingFiles/Preview Content\"";
@@ -285,7 +457,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.UIDisplayManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
 				SWIFT_OBJC_BRIDGING_HEADER = UIDisplayManager/BridgingHeader.h;
@@ -299,8 +471,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/UIDisplayManager.entitlements;
-				CODE_SIGN_IDENTITY = "-";
+				CODE_SIGN_ENTITLEMENTS = UIDisplayManager/SupportingFiles/UIDisplayManager.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				COMBINE_HIDPI_IMAGES = YES;
 				DEVELOPMENT_ASSET_PATHS = "\"UIDisplayManager/SupportingFiles/Preview Content\"";
@@ -313,7 +485,7 @@
 					"@executable_path/../Frameworks",
 				);
 				MACOSX_DEPLOYMENT_TARGET = 11.2;
-				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.UIDisplayManager;
+				PRODUCT_BUNDLE_IDENTIFIER = com.danxnu.displaymanager;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_COMPILATION_MODE = wholemodule;
 				SWIFT_OBJC_BRIDGING_HEADER = UIDisplayManager/BridgingHeader.h;
@@ -478,6 +650,15 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
+		3743F6EC263E9CD20049B8B4 /* Build configuration list for PBXNativeTarget "LoginHelper" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				3743F6ED263E9CD20049B8B4 /* Debug */,
+				3743F6EE263E9CD20049B8B4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
 		37CECF74263B1A170037B9FF /* Build configuration list for PBXNativeTarget "UIDisplayManager" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (

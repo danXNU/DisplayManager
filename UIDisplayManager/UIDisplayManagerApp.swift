@@ -12,6 +12,7 @@ struct UIDisplayManagerApp: App {
     var body: some Scene {
         WindowGroup {
             ContentView()
+                .frame(maxWidth: 350)
         }
     }
 }

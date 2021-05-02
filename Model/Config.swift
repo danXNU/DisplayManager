@@ -8,12 +8,17 @@
 import Foundation
 
 struct Config: Codable {
-    var configs: [UUID: Mode] = [:]
+    public var configs: [UUID: Mode] = [:]
     
     private static let defaultKey = "defaultConfig"
-        
+    private static let defaults = UserDefaults(suiteName: "R779A64KR9.com.danxnu.displaymanager")!
+    
+    enum CodingKeys: String, CodingKey {
+        case configs
+    }
+    
     static func getDefault() -> Config {
-        guard let data = UserDefaults.standard.data(forKey: defaultKey) else {
+        guard let data = defaults.data(forKey: defaultKey) else {
             return Config()
         }
         
@@ -26,7 +31,7 @@ struct Config: Codable {
     
     func save() {
         let data = try! JSONEncoder().encode(self)
-        UserDefaults.standard.set(data, forKey: Config.defaultKey)
+        Config.defaults.set(data, forKey: Config.defaultKey)
     }
     
 }

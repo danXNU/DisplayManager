@@ -36,6 +36,7 @@ struct ContentView: View {
                     
                     Divider()
                 }
+                .frame(height: 100)
                 
             }
             
@@ -53,7 +54,7 @@ struct ContentView: View {
                 HStack {
                     Text("Set config on startup")
                     Spacer()
-                    Toggle("", isOn: .constant(true))
+                    Toggle("", isOn: loginAgentBinding)
                         .toggleStyle(SwitchToggleStyle())
                         .labelsHidden()
                 }
@@ -95,6 +96,19 @@ struct ContentView: View {
     
     func hide() {
         viewModel.dismissPlaceholder()        
+    }
+    
+    var loginAgentBinding: Binding<Bool> {
+        Binding {
+            viewModel.loginServiceActive
+        } set: { active in
+            viewModel.loginServiceActive = active
+            if active {
+                viewModel.activateOnStartup()
+            } else {
+                viewModel.activateOnStartup(activate: false)
+            }
+        }
     }
     
     func resolutionBinding(for monitor: Monitor) -> Binding<Mode> {

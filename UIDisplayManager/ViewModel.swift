@@ -9,6 +9,7 @@ import Foundation
 import Combine
 import AppKit
 import SwiftUI
+import ServiceManagement
 
 class ViewModel: ObservableObject {
     
@@ -16,12 +17,15 @@ class ViewModel: ObservableObject {
     @Published var hoveredMonitor: Monitor?
     
     @Published var defaultConfig: Config = Config.getDefault()
+    @Published var loginServiceActive: Bool = false
     
     var presentedWindow: NSWindowController?
     
     private var observers: [AnyCancellable] = []
     
     init() {
+        loginServiceActive = isServiceRunning
+        
         let nc = NotificationCenter.default
             nc.addObserver(self,
                            selector: #selector(update),
@@ -73,6 +77,15 @@ class ViewModel: ObservableObject {
                 
             monitor.setNewMode(mode: mode)
         }
+    }
+    
+    func activateOnStartup(activate: Bool = true) {
+        let success = SMLoginItemSetEnabled(loginHelperBundle as CFString, activate)
+        print("Success: \(success)")
+    }
+    
+    private var isServiceRunning: Bool {
+        return NSWorkspace.shared.runningApplications.contains(where: { $0.bundleIdentifier == loginHelperBundle })
     }
     
     var hasChanged: Bool {

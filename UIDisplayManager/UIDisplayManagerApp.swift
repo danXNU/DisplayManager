@@ -26,7 +26,7 @@ struct UIDisplayManagerApp: App {
                         .foregroundColor(.blue)
                         .font(.caption)
                         .onTapGesture {
-                            let url = URL(string: "https://www.github.com/danxnu")!
+                            let url = URL(string: "https://www.github.com/danxnu/DisplayManager")!
                             NSWorkspace.shared.open(url)
                         }
                 }

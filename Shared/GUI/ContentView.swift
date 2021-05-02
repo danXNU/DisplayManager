@@ -96,6 +96,7 @@ struct ContentView: View {
                             .toggleStyle(SwitchToggleStyle())
                             .labelsHidden()
                     }
+                    
                 } else {
                     Button("Quit") {
                         NSApp.terminate(nil)

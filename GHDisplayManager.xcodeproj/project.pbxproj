@@ -23,6 +23,7 @@
 		376098A2263EC863006F25A2 /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
 		376098A3263EC868006F25A2 /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
 		376098A6263ECBB0006F25A2 /* DisplayManager-Agent.app in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37609887263EC4D4006F25A2 /* DisplayManager-Agent.app */; settings = {ATTRIBUTES = (RemoveHeadersOnCopy, ); }; };
+		376098A8263ED75F006F25A2 /* DisplayManager in CopyFiles */ = {isa = PBXBuildFile; fileRef = 37F0785F2638B4C200BA3320 /* DisplayManager */; settings = {ATTRIBUTES = (CodeSignOnCopy, ); }; };
 		37991BFE263E9F0E0043614A /* Monitor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF7F263C2E970037B9FF /* Monitor.swift */; };
 		37991BFF263E9F110043614A /* Mode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 37CECF82263C37270037B9FF /* Mode.swift */; };
 		37991C00263E9F230043614A /* DisplayManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 37F078702638B57B00BA3320 /* DisplayManager.m */; };
@@ -54,6 +55,16 @@
 			dstSubfolderSpec = 1;
 			files = (
 				376098A6263ECBB0006F25A2 /* DisplayManager-Agent.app in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		376098A7263ED755006F25A2 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "";
+			dstSubfolderSpec = 7;
+			files = (
+				376098A8263ED75F006F25A2 /* DisplayManager in CopyFiles */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -341,6 +352,7 @@
 				37CECF63263B1A160037B9FF /* Resources */,
 				37991C03263EABFB0043614A /* CopyFiles */,
 				376098A5263ECB9D006F25A2 /* CopyFiles */,
+				376098A7263ED755006F25A2 /* CopyFiles */,
 			);
 			buildRules = (
 			);

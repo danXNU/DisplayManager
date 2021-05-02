@@ -11,8 +11,28 @@ import SwiftUI
 struct UIDisplayManagerApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
-                .frame(maxWidth: 350)
+            VStack {
+                ContentView()
+                
+                HStack(spacing: 0) {
+                    Text("DisplayManager by Daniel (@danxnu) - ")
+                        .foregroundColor(.secondary)
+                        .font(.caption)
+                    
+                    
+                    Text("GitHub")
+                        .underline()
+                        .bold()
+                        .foregroundColor(.blue)
+                        .font(.caption)
+                        .onTapGesture {
+                            let url = URL(string: "https://www.github.com/danxnu")!
+                            NSWorkspace.shared.open(url)
+                        }
+                }
+            }
+            .padding(.bottom)
+            .frame(maxWidth: 350)
         }
     }
 }

@@ -3,3 +3,5 @@
 //
 
 #import "DisplayManager.h"
+#import "SuperAgent.h"
+#import "SuperObserver.h"

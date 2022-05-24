@@ -7,13 +7,17 @@
 
 import Cocoa
 import SwiftUI
+import CoreGraphics
 
 @main
-class AppDelegate: NSObject, NSApplicationDelegate {
+class AppDelegate: NSObject, NSApplicationDelegate, SuperObserverDelegate {
 
     var window: NSWindow!
 
     let defaults = UserDefaults(suiteName: "R779A64KR9.com.danxnu.displaymanager")
+    
+    let superObserver = SuperObserver()
+    let superManager = SuperManager()
     
     func applicationDidFinishLaunching(_ aNotification: Notification) {
         let config = Config.getDefault()
@@ -29,15 +33,24 @@ class AppDelegate: NSObject, NSApplicationDelegate {
             }
         }
         
+        superObserver.delegate = self
+        superObserver.registerDisplay()
         
-        
+        superManager.searchAndApplyConfig()
+
 //        NSApp.terminate(nil)
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
         // Insert code here to tear down your application
+        superObserver.deactivateDisplay()
     }
-
-
+    
+    func displayChanged(_ displayID: CGDirectDisplayID, flags: CGDisplayChangeSummaryFlags, userInfo: UnsafeMutableRawPointer?) {
+        if flags.contains(.addFlag) {
+            print("YOOOO")
+            superManager.searchAndApplyConfig()
+        }
+    }
 }
 

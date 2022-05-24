@@ -9,9 +9,12 @@ import SwiftUI
 
 struct ContentView: View {
     @StateObject var viewModel = ViewModel()
+    @StateObject var superManager = SuperManager()
+    
+    @State var isShowingSaveSheet: Bool = false
+    @State var configName: String = ""
     
     @State var isHelpScreenShowing: Bool = false
-    
     @State var isStatusBarItem: Bool = false
     
     @AppStorage("startAgentOnLogin", store: UserDefaults(suiteName: "R779A64KR9.com.danxnu.displaymanager"))
@@ -107,8 +110,48 @@ struct ContentView: View {
                 }
                 
             }
+            
+            Divider()
+            
+            VStack {
+                Button("Save current config") {
+                    isShowingSaveSheet = true
+                }
+                
+                ForEach(superManager.configs) { config in
+                    Text(config.name)
+                    Text("Displays: ")
+                        .bold()
+                    
+                    ForEach(config.displays.map { $0 }, id: \.self) { displayID in
+                        Text(displayID.uuidString)
+                    }
+                }
+            }
+            
         }
         .padding()
+        .sheet(isPresented: $isShowingSaveSheet) {
+            VStack(alignment: .leading, spacing: 10) {
+                Text("Scegli un nome per la config (ex: Casa, Lavoro)")
+                TextField("Config name", text: $configName)
+            }
+            .padding()
+            .frame(minWidth: 400)
+            .toolbar {
+                ToolbarItem(placement: ToolbarItemPlacement.cancellationAction) {
+                    Button("Annulla") {
+                        self.isShowingSaveSheet = false
+                    }
+                }
+                ToolbarItem(placement: ToolbarItemPlacement.confirmationAction) {
+                    Button("Salva") {
+                        self.superManager.saveCurrentConfig(name: configName)
+                        self.isShowingSaveSheet = false
+                    }
+                }
+            }
+        }
     }
     
     var loginAgentBinding: Binding<Bool> {

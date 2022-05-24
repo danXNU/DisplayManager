@@ -9,5 +9,7 @@
 #define BridgingHeader_h
 
 #include "DisplayManager.h"
+#include "SuperAgent.h"
+#import "SuperObserver.h"
 
 #endif /* BridgingHeader_h */

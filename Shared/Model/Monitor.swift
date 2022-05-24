@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import ApplicationServices
 
 class Monitor: ObservableObject {
     var number: UInt32

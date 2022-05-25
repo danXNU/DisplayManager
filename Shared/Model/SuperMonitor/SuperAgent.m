@@ -6,6 +6,7 @@
 //
 
 #import "SuperAgent.h"
+#import "DisplayManager.h"
 
 @implementation SuperAgent
 
@@ -47,9 +48,18 @@
         return NO;
     }
     
+    DisplayManager *manager = [[DisplayManager alloc] init];
+    NSArray<NSNumber *> *displaysIDs = [manager getActiveMonitors];
+    NSMutableDictionary *displays = [[NSMutableDictionary alloc] initWithDictionary:@{}];
+    
+    for (NSNumber *display in displaysIDs) {
+        NSUUID *uuid = [manager getUUIDFromDisplayNumber:display];
+        displays[uuid] = display;
+    }
+    
     for (NSDictionary *display in config) {
-        CFUUIDRef disUUID = (__bridge CFUUIDRef)((NSUUID *)display[@"id"]);
-        uint32_t dispID = CGDisplayGetDisplayIDFromUUID(disUUID); // Converto da UUID a DisplayID
+        NSUUID *disUUID = ((NSUUID *)display[@"id"]);
+        CGDirectDisplayID dispID = [displays[disUUID] unsignedIntValue];
         
         float x = [display[@"rect"][@"x"] floatValue];
         float y = [display[@"rect"][@"y"] floatValue];

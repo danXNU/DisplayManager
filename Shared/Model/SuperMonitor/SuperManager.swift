@@ -16,7 +16,7 @@ fileprivate let configUrl: URL = {
 
 class SuperManager: ObservableObject {
     
-    @Published var configs: [SuperConfiguration] = []
+    @Published var configs: Set<SuperConfiguration> = []
     private let superAgent: SuperAgent = SuperAgent.init()
     
     init() {
@@ -29,6 +29,7 @@ class SuperManager: ObservableObject {
             
             let rawConfig = config.rawRepresentation as? [Any]
             self.superAgent.applyConfig(rawConfig)
+            NotificationCenter.default.post(name: .init(rawValue: "config-applied"), object: nil, userInfo: ["config": config])
         } else {
             print("🔴 NO VALID CONFIG FOUND")
         }
@@ -59,11 +60,16 @@ class SuperManager: ObservableObject {
     }
     
     func addConifg(_ config: SuperConfiguration) {
-        self.configs.append(config)
+        self.configs.insert(config)
         self.saveConfigurations(self.configs)
     }
     
-    func saveConfigurations(_ configurations: [SuperConfiguration]) {
+    func removeConfig(_ config: SuperConfiguration) {
+        self.configs.remove(config)
+        self.saveConfigurations(self.configs)
+    }
+    
+    func saveConfigurations(_ configurations: Set<SuperConfiguration>) {
         guard let data = try? JSONEncoder().encode(configurations) else { return }
         if FileManager.default.fileExists(atPath: configUrl.path) {
             try? FileManager.default.removeItem(atPath: configUrl.path)
@@ -75,7 +81,7 @@ class SuperManager: ObservableObject {
         guard let data = FileManager.default.contents(atPath: configUrl.path) else { return }
         do {
             let configs = try JSONDecoder().decode([SuperConfiguration].self, from: data)
-            self.configs = configs
+            self.configs = Set(configs)
         } catch {
             fatalError("\(error)")
         }

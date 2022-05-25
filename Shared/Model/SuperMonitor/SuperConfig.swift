@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct SuperConfiguration: Codable, Identifiable {
+struct SuperConfiguration: Codable, Identifiable, Hashable, Equatable {
     var name: String
     var configMap: [UUID: MonitorConfig]
     
@@ -31,6 +31,14 @@ struct SuperConfiguration: Codable, Identifiable {
         }
         
         return arr as NSArray
+    }
+    
+    func hash(into hasher: inout Hasher) {
+        hasher.combine(id)
+    }
+    
+    static func ==(lhs: SuperConfiguration, rhs: SuperConfiguration) -> Bool {
+        return lhs.id == rhs.id
     }
 }
 

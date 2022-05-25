@@ -118,13 +118,15 @@ struct ContentView: View {
                     isShowingSaveSheet = true
                 }
                 
-                ForEach(superManager.configs) { config in
-                    Text(config.name)
-                    Text("Displays: ")
-                        .bold()
-                    
-                    ForEach(config.displays.map { $0 }, id: \.self) { displayID in
-                        Text(displayID.uuidString)
+                List {
+                    ForEach(superManager.configs.sorted { $0.name > $1.name } ) { config in
+                        Text(config.name)
+                            .contextMenu {
+                                Button("Elimina") {
+                                    self.superManager.removeConfig(config)
+                                }
+                            }
+                        Divider()
                     }
                 }
             }
